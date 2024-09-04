@@ -1,16 +1,16 @@
 package br.edu.fatec.factory;
 
-class Rectangle implements Calculable{
+public class Triangle implements Calculable{
     private Double base;
     private Double high;
 
-    public Rectangle(Double base, Double high){
+    public Triangle(Double base, Double high){
         this.base = base;
         this.high = high;
     }
 
     @Override
     public Double calcularArea() {
-        return base * high;
+        return (base * high)/2;
     }
 }

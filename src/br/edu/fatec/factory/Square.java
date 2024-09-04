@@ -1,14 +1,14 @@
 package br.edu.fatec.factory;
 
-class Square implements Calculable{
-    double lado;   
-    
-    public Square(double lado){
+public class Square implements Calculable {
+    private double lado;
+
+    public Square(Double lado){
         this.lado = lado;
     }
 
     @Override
-    public double calcularArea() {
+    public Double calcularArea() {
         return lado * lado;
     }
 }
