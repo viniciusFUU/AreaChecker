@@ -1,25 +1,16 @@
 package br.edu.fatec.factory;
 
 class Diamond implements Calculable{
-    private Double baseMaior;
-    private Double baseMenor;
-    private Double trapezoHigh;
-    private Double triangleHigh;
+    private Double diagonalMaior;
+    private Double diagonalMenor;
 
-    public Diamond(Double baseMaior, Double baseMenor, Double trapezoHigh, Double triangleHigh){
-        this.baseMaior = baseMaior;
-        this.baseMenor = baseMenor;
-        this.trapezoHigh = trapezoHigh;
-        this.triangleHigh = triangleHigh;
+    public Diamond(Double diagonalMaior, Double diagonalMenor){
+        this.diagonalMaior = diagonalMaior;
+        this.diagonalMenor = diagonalMenor;
     }
 
     @Override
     public Double calcularArea() {
-        Trapezo trapezo = new Trapezo(baseMaior, baseMenor, trapezoHigh);
-        Double valorTrapezo = trapezo.calcularArea(); 
-
-        Triangle triangle = new Triangle(baseMaior, triangleHigh);
-        Double valorTriangle = triangle.calcularArea();
-        return valorTrapezo + valorTriangle;
+        return (diagonalMaior * diagonalMenor)/2;
     }
 }
